@@ -62,7 +62,7 @@ func sendSketchRequest(fields []string, typ pb.SketchType) error {
 	case "info":
 		return getSketchInfo(in)
 	default:
-		return fmt.Errorf("unkown operation: %s", fields[0])
+		return fmt.Errorf("unknown operation: %s", fields[0])
 	}
 	return nil
 }
@@ -165,6 +165,6 @@ func getFromSketch(fields []string, in *pb.Sketch) error {
 		}
 		return err
 	default:
-		return fmt.Errorf("Unkown Type %s", in.GetType().String())
+		return fmt.Errorf("Unknown Type %s", in.GetType().String())
 	}
 }

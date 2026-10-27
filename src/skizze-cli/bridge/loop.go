@@ -156,7 +156,7 @@ func evaluateQuery(query string) error {
 		case datamodel.DOM:
 			return sendDomainRequest(fields)
 		default:
-			return fmt.Errorf("unkown field or command %s", fields[1])
+			return fmt.Errorf("unknown field or command %s", fields[1])
 		}
 	}
 	return errors.New("Invalid operation")

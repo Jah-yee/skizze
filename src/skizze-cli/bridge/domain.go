@@ -78,7 +78,7 @@ func sendDomainRequest(fields []string) error {
 	case "info":
 		return getDomainInfo(fields, in)
 	default:
-		return fmt.Errorf("unkown operation: %s", fields[0])
+		return fmt.Errorf("unknown operation: %s", fields[0])
 	}
 }
 

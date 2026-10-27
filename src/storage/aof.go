@@ -62,7 +62,7 @@ func (aof *AOF) Run() {
 func (aof *AOF) write(e *Entry) {
 	line := fmt.Sprintf("%d|%s/", e.op, string(e.raw))
 	if _, err := aof.buffer.WriteString(line); err != nil {
-		logger.Errorf("an error has ocurred while writing AOF: %s", err.Error())
+		logger.Errorf("an error has occurred while writing AOF: %s", err.Error())
 	}
 }
 
